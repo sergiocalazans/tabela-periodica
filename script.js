@@ -76,6 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('fase-detalhe').textContent = elemento.phase;
         document.getElementById('categoria-detalhe').textContent = elemento.category;
 
-        detalhesElemento.scrollIntoView({ behavior: 'smooth' });
+        // detalhesElemento.scrollIntoView({ behavior: 'smooth' });
     }
 });

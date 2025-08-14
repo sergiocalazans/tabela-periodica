@@ -69,7 +69,7 @@ h1 {
 }
 
 .elemento {
-    border: 1px solid #aaa;
+    border: 1px solid #000000;
     padding: 2px;
     text-align: center;
     cursor: pointer;
@@ -140,6 +140,10 @@ h1 {
     flex-shrink: 0;
 }
 
+.item-elemento {
+    font-weight: bold;
+}
+
 #info-elemento {
     text-align: left;
 }
@@ -148,7 +152,7 @@ h1 {
 #info-elemento h2 {
     margin-top: 0;
     font-size: clamp(1.1rem, 3vw, 1.5rem);
-    /* Ex: ~17.6px a 24px */
+    font-weight: bold;
 }
 
 #info-elemento p {
@@ -202,6 +206,11 @@ h1 {
 
 /* Media Query para telas muito pequenas */
 @media (max-width: 599px) {
+
+    html, body {
+        overflow-x: hidden;
+    }
+
 
     .elemento .nome,
     .elemento .massa-atomica,
