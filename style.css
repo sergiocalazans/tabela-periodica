@@ -19,8 +19,6 @@ h1 {
     grid-template-rows: repeat(10, 4.8vw);
     gap: 4px;
     margin: 20px auto;
-    max-width: 100%;
-    width: auto;
 }
 
 .elemento {
