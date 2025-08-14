@@ -208,8 +208,9 @@ h1 {
 @media (max-width: 600px) {
 
     html, body {
-        overflow-x: hidden;
+        overflow-y: hidden;
     }
+
 
     .elemento .nome,
     .elemento .massa-atomica,
@@ -228,7 +229,7 @@ h1 {
         display: grid;
         grid-template-columns: repeat(18, 10vw);
         grid-template-rows: repeat(10, 10vw);
-        /* padding: 10px; */
+        padding: 10px; 
     }
 
 }
