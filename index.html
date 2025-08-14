@@ -4,12 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela Periódica</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="periodic-table.png" image="image/x-icon">
+    <!-- Renomeado o href para corresponder ao nome do arquivo CSS -->
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="shortcut icon" href="./periodic-table.png" type="image/x-icon">
 </head>
 <body>
     <h1>Tabela Periódica dos Elementos</h1>
+
+    <div id="glossario">
+        <ul>
+            <li><span class="cor-legenda metal-alcalino"></span>Metais Alcalinos</li>
+            <li><span class="cor-legenda metal-alcalinoterroso"></span>Metais Alcalinoterrosos</li>
+            <li><span class="cor-legenda lantanideo"></span>Lantanídeos</li>
+            <li><span class="cor-legenda actinideo"></span>Actinídeos</li>
+            <li><span class="cor-legenda metal-de-transicao"></span>Metais de Transição</li>
+            <li><span class="cor-legenda metal-pos-transicao"></span>Metais Pós-Transição</li>
+            <li><span class="cor-legenda metaloide"></span>Metaloides</li>
+            <li><span class="cor-legenda nao-metal-poliatomico"></span>Não Metais</li>
+            <li><span class="cor-legenda gas-nobre"></span>Gases Nobres</li>
+            <li><span class="cor-legenda desconhecido"></span>Desconhecido</li>
+        </ul>
+    </div>
+
     <div id="tabela-periodica"></div>
+
     <div id="detalhes-elemento">
         <div id="caixa-elemento-detalhe"></div>
         <div id="info-elemento">
@@ -24,6 +42,7 @@
             <p><strong>Categoria:</strong> <span id="categoria-detalhe"></span></p>
         </div>
     </div>
-    <script src="script.js"></script>
+    
+    <script src="./script.js"></script>
 </body>
 </html>

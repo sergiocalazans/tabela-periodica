@@ -1,0 +1,235 @@
+/* --- Reset Básico e Padrões --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Essencial para layouts mais fáceis */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    /* Fonte responsiva com tamanho mínimo, preferido (vw) e máximo. */
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    /* Ex: ~24px a 40px */
+}
+
+/* --- ESTILOS DO GLOSSÁRIO / LEGENDA --- */
+#glossario {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+#glossario ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+    padding: 0;
+    margin: 0;
+    /* Fonte responsiva para a legenda */
+    font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+    /* Ex: ~12px a 14.4px */
+}
+
+#glossario li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cor-legenda {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    flex-shrink: 0;
+}
+
+/* -------------------------------------- */
+
+
+#tabela-periodica {
+    display: grid;
+    grid-template-columns: repeat(18, 4.8vw);
+    grid-template-rows: repeat(10, 4.8vw);
+    gap: 4px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.elemento {
+    border: 1px solid #aaa;
+    padding: 2px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* O font-size base foi removido para controle individual e responsivo abaixo */
+}
+
+.elemento:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    position: relative;
+}
+
+/* Fontes responsivas para cada parte do elemento dentro da tabela */
+.elemento .numero-atomico {
+    align-self: flex-start;
+    margin-left: 2px;
+    font-size: clamp(0.4rem, 1vw, 0.6rem);
+    /* Ex: ~6.4px a 9.6px */
+}
+
+.elemento .simbolo {
+    font-weight: bold;
+    font-size: clamp(0.7rem, 2vw, 1.2rem);
+    /* Ex: ~11.2px a 19.2px */
+}
+
+.elemento .nome {
+    word-break: break-all;
+    font-size: clamp(0.35rem, 0.8vw, 0.55rem);
+    /* Ex: ~5.6px a 8.8px */
+}
+
+.elemento .massa-atomica {
+    font-size: clamp(0.35rem, 0.8vw, 0.55rem);
+    /* Ex: ~5.6px a 8.8px */
+}
+
+#detalhes-elemento {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 90%;
+    max-width: 600px;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#caixa-elemento-detalhe {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+#info-elemento {
+    text-align: left;
+}
+
+/* Fontes responsivas para o painel de detalhes */
+#info-elemento h2 {
+    margin-top: 0;
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    /* Ex: ~17.6px a 24px */
+}
+
+#info-elemento p {
+    /* Adicionado para responsividade no texto dos detalhes */
+    margin: 8px 0;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    /* Ex: ~12.8px a 16px */
+}
+
+/* Categorias de Cores com nomes de classe em português */
+.metal-alcalino {
+    background-color: #ff8a80;
+}
+
+.metal-alcalinoterroso {
+    background-color: #ffd180;
+}
+
+.lantanideo {
+    background-color: #ffff8d;
+}
+
+.actinideo {
+    background-color: #d1c4e9;
+}
+
+.metal-de-transicao {
+    background-color: #80d8ff;
+}
+
+.metal-pos-transicao {
+    background-color: #a7ffeb;
+}
+
+.metaloide {
+    background-color: #cfd8dc;
+}
+
+.nao-metal-diatomico,
+.nao-metal-poliatomico {
+    background-color: #b9f6ca;
+}
+
+.gas-nobre {
+    background-color: #f8bbd0;
+}
+
+.desconhecido {
+    background-color: #e0e0e0;
+}
+
+/* Media Query para telas muito pequenas */
+@media (max-width: 600px) {
+
+    .elemento .nome,
+    .elemento .massa-atomica,
+    #caixa-elemento-detalhe {
+        display: none;
+    }
+
+    #detalhes-elemento {
+        margin-top: 0;
+    }
+
+    #tabela-periodica {
+        display: grid;
+        grid-template-columns: repeat(18, 10vw);
+        grid-template-rows: repeat(10, 10vw);
+        /* gap: 4px; */
+        /* margin: 0 auto; */
+        /* max-width: 100%; */
+        padding: 10px;
+
+    }
+
+}
