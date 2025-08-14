@@ -1,10 +1,3 @@
-/* --- Reset Básico e Padrões --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -20,9 +13,8 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 10px;
-    /* Fonte responsiva com tamanho mínimo, preferido (vw) e máximo. */
     font-size: clamp(1.5rem, 4vw, 2.5rem);
-    /* Ex: ~24px a 40px */
+    font-weight: bold;
 }
 
 /* --- ESTILOS DO GLOSSÁRIO / LEGENDA --- */
@@ -215,10 +207,6 @@ h1 {
     .elemento .massa-atomica,
     #caixa-elemento-detalhe {
         display: none;
-    }
-
-    #detalhes-elemento {
-        margin-top: 0;
     }
 
     #glossario ul {
