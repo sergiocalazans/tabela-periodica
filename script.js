@@ -75,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('configuracao-eletronica-detalhe').textContent = elemento.electron_configuration_semantic;
         document.getElementById('fase-detalhe').textContent = elemento.phase;
         document.getElementById('categoria-detalhe').textContent = elemento.category;
-
-        // detalhesElemento.scrollIntoView({ behavior: 'smooth' });
+        detalhesElemento.scrollIntoView({ behavior: 'smooth' });
     }
 });
